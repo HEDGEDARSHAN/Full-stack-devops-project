@@ -1,0 +1,8 @@
+Your submission needs clear documentation. Add this to your README.md to show you understood the technical challenges:
+
+Technical Implementation
+Containerization: Used Docker and Docker Compose to orchestrate a Node.js backend, a static frontend, and a PostgreSQL database.
+
+Network Resolution: Resolved npm install timeout issues by configuring custom DNS (8.8.8.8) in the Docker Engine.
+
+Automation: Integrated GitHub Actions to automate the build and dependency installation process.
