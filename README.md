@@ -1,4 +1,4 @@
-Full-Stack DevOps Project - ReachInbox Assignment
+**Full-Stack DevOps Project - ReachInbox Assignment**
 
 Project Overview
 
