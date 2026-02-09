@@ -3,7 +3,7 @@ document.getElementById('fetchBtn').addEventListener('click', async () => {
     responseDiv.innerHTML = "Fetching...";
 
     try {
-        // We use a relative path because Docker Compose will handle the routing
+        
         const response = await fetch('/api/status');
         const data = await response.json();
 
