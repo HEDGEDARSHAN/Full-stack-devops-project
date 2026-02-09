@@ -1,9 +1,13 @@
 const express = require('express');
+const cors = require('cors'); 
 const { Pool } = require('pg');
 require('dotenv').config();
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+
+// Enable CORS so the frontend on port 80 can talk to this API
+app.use(cors());
 
 // Database Configuration using environment variables
 const pool = new Pool({
@@ -25,13 +29,13 @@ app.get('/api/status', async (req, res) => {
   }
 
   res.json({
-    app_name: "DevOps-Assignment-Backend", // Assignment req
-    environment: process.env.NODE_ENV || "dev", // Assignment req
-    timestamp: new Date().toISOString(), // Assignment req
-    database_status: dbStatus // Assignment req
+    app_name: "DevOps-Assignment-Backend",
+    environment: process.env.NODE_ENV || "dev",
+    timestamp: new Date().toISOString(),
+    database_status: dbStatus
   });
 });
 
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
   console.log(`Backend running on port ${PORT}`);
 });
