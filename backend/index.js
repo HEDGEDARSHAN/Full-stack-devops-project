@@ -6,10 +6,8 @@ require('dotenv').config();
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Enable CORS so the frontend on port 80 can talk to this API
 app.use(cors());
 
-// Database Configuration using environment variables
 const pool = new Pool({
   user: process.env.DB_USER,
   host: process.env.DB_HOST,
